@@ -4,9 +4,8 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     steps:
-      - id: setup-jsonnet
-        uses: zendesk/setup-jsonnet@v1
       - uses: actions/checkout@v2
         with:
           repository: grafana/grafonnet-lib
+      - run: pip install jsonnet
       - run: ./tests.sh
