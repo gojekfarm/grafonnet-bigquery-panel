@@ -1,4 +1,4 @@
-{
+local bigqueryPanel = {
   /**
    * Return a bigquery target.
    * Requires doitintl-bigquery-datasource to be explicitly installed on grafana.
@@ -35,4 +35,8 @@
     format: format,
     [if hide != null then 'hide']: hide,
   },
+};
+
+{
+  bigqueryPanel:: bigqueryPanel,
 }

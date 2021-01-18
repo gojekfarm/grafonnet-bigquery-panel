@@ -18,8 +18,9 @@ do
     fi
 done
 
-for i in tests/*/*.jsonnet examples/*.jsonnet
+for i in tests/*.jsonnet
 do
+    echo $i
     json=$(dirname $i)/$( basename $i .jsonnet )_test_output.json
     json_e=$(dirname $i)/$( basename $i .jsonnet )_compiled.json
     t="Compiling $i..."
