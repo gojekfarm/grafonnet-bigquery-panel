@@ -41,10 +41,15 @@ Clone the repository into the working directory, in the same place that you clon
 
 ### Import the plugin in your jsonnet code
 ```
-local grafana = (import 'grafonnet/grafana.libsonnet')
-              + (import 'grafonnet-bigquery-panel/bigquery.libsonnet');
+local grafana = (import 'grafonnet/grafana.libsonnet');
+local bigquery = (import 'grafonnet-bigquery-panel/bigquery.libsonnet');
+local bigqueryPanel = bigquery.bigqueryPanel
 ```
 
 
 ## Examples of Usage
 See the tests for an example
+
+
+## Contributing
+Please raise a PR for any changes you want to see in the plugin! :D
