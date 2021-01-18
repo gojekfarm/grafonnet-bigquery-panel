@@ -8,4 +8,6 @@ jobs:
         with:
           repository: grafana/grafonnet-lib
       - run: pip install jsonnet
-      - run: ./tests.sh
+      - run: jsonnet -v
+      - run: jsonnetfmt -v
+
