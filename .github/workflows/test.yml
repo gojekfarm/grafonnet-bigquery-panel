@@ -1,0 +1,8 @@
+name: test
+on: [push]
+jobs:
+  run-tests:
+    runs-on: bitnami/jsonnet:0.17.0
+    steps:
+      - uses: actions/checkout@v2
+      - run: ./tests.sh
